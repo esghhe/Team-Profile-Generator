@@ -98,5 +98,59 @@ const engineerQuestions = () => {
     })
 };
 
+const internQuestions = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the intern\'s name?'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the inter\'s id?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the inter\'s email address?'
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the inter\'s school?'
+        },
+        {
+            type: 'list',
+            name: 'addMember',
+            message: 'What type of team member would like to add next?',
+            choices: ['Engineer', 'Intern', 'I don\,t want to add any team member'],
+        }
+    ])
+    .then((internAnswers) => {
+        const intern = new Intern(internAnswers.id, internAnswers.name, internAnswers.email, internAnswers.school)
+        team.push(intern)
+        switch(internAnswers.addMember){
+            case 'Engineer':
+                engineerQuestions();
+                break;
+            case 'Intern':
+                internQuestions();
+                break;
+            default:
+                writeToFile('dist/index.html', generateTeam(team))       
+        }
+    })
+}
+
+managerQuestions();
+
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, (err) => {
+        if(err) throw err;
+        console.log('file saved')
+    });
+};
+
 
 
