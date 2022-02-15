@@ -25,3 +25,6 @@ The Team Profile Generator is a node command line interface that allows a manage
 Screenshot photo of the HTML fil:
  
 <img src ='images\team-generator.png' alt='Screenshot photo of the HTML fil'>
+
+Click the image below to watch a video demonstration:
+[![Video Demonstration](https://watch.screencastify.com/v/qoYgQfrgBnoS7ALnxESI)]
