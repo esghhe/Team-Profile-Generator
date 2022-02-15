@@ -1,0 +1,29 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "challenge10",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esghhe/Team-Profile-Generator.git"
+  },
+  "author": "Samuel g Hagos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esghhe/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/esghhe/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

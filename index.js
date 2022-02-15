@@ -48,13 +48,13 @@ const managerQuestions = () => {
                internQuestions();
                break;
            default:
-           writeToFile('dist/index.html', generateTeam(team))
+           writeToFile('src/index.html', generateTeam(team))
         }
     });
 };
 
 const engineerQuestions = () => {
-    inquirer.promt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'name',
@@ -93,7 +93,7 @@ const engineerQuestions = () => {
                 internQuestions();
                 break;
             default:
-                writeToFile('dist/index.html', generateTeam(team))
+                writeToFile('src/index.html', generateTeam(team))
         }
     })
 };
@@ -138,7 +138,7 @@ const internQuestions = () => {
                 internQuestions();
                 break;
             default:
-                writeToFile('dist/index.html', generateTeam(team))       
+                writeToFile('src/index.html', generateTeam(team))       
         }
     })
 }
