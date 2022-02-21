@@ -79,7 +79,7 @@ const engineerQuestions = () => {
             type: 'input',
             name: 'addMember',
             message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern', 'i don\'t want to add any team members'],
+            choices: ['Engineer', 'Intern', 'I don\'t want to add any team members'],
         }
     ])
     .then((engineerAnswers) => {
@@ -108,23 +108,23 @@ const internQuestions = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'What is the inter\'s id?'
+            message: 'What is the intern\'s id?'
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is the inter\'s email address?'
+            message: 'What is the intern\'s email address?'
         },
         {
             type: 'input',
             name: 'school',
-            message: 'What is the inter\'s school?'
+            message: 'What is the intern\'s school?'
         },
         {
             type: 'list',
             name: 'addMember',
             message: 'What type of team member would like to add next?',
-            choices: ['Engineer', 'Intern', 'I don\,t want to add any team member'],
+            choices: ['Engineer', 'Intern', 'I don\'t want to add any team member'],
         }
     ])
     .then((internAnswers) => {

@@ -26,5 +26,22 @@ Screenshot photo of the HTML fil:
  
 <img src ='images\team-generator.png' alt='Screenshot photo of the HTML fil'>
 
-Click the image below to watch a video demonstration:
-[!Video Demonstration](https://watch.screencastify.com/v/qoYgQfrgBnoS7ALnxESI)
+Click the link below to watch a video demonstration:
+[![Video Demonstration](image-walkthrough.png)](https://drive.google.com/file/d/1xVZAZ9-R34SSvhu8JajRykdwBTkwUsWo/view)
+
+## Test:
+Click the link below to watch the video demonstration of testing files:
+[![Video Testing Demonstration](imgae-Test.png)](https://drive.google.com/file/d/14j8kyKbzULoMxxV86mGmsGQdc2qayEc0/view)
+
+## Licese:
+MIT License
+
+Copyright (c) 2022 Samuel Hagos
+
+Permission is hereby granted, free of charge to any person obtaining a copy
+of this software and associated documentation files , to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
