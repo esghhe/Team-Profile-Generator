@@ -32,8 +32,10 @@ const managerQuestions = () => {
         {
             type: 'list',
             name: 'addMember',
-            message: 'What type of team member would you like to add?',
-            choices: ['Engineer','Intern', 'I don\'t mant to add any team members'],
+            message: 'Do you want to add another team member?',
+            choices: ['Yes', 'No'],
+            message: 'What type of team member would you like to add next?',
+            choices: ['Engineer', 'Intern'],
         }
     ])
     .then((managerAnswers) => {
@@ -78,8 +80,10 @@ const engineerQuestions = () => {
         {
             type: 'input',
             name: 'addMember',
+            message: 'Do you want to add another team member?',
+            choices: ['Yes', 'No'],
             message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any team members'],
+            choices: ['Engineer', 'Intern'],
         }
     ])
     .then((engineerAnswers) => {
@@ -123,8 +127,10 @@ const internQuestions = () => {
         {
             type: 'list',
             name: 'addMember',
-            message: 'What type of team member would like to add next?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any team member'],
+            message: 'Do you want to add another team member?',
+            choices: ['Yes', 'No'],
+            message: 'What type of team member would you like to add next?',
+            choices: ['Engineer', 'Intern'],
         }
     ])
     .then((internAnswers) => {
