@@ -29,12 +29,12 @@ Screenshot photo of the HTML file:
 ## Demo:
 Click the link below to watch a video demonstration:
 
-(https://drive.google.com/file/d/1xVZAZ9-R34SSvhu8JajRykdwBTkwUsWo/view)
+(https://drive.google.com/file/d/1J4k-mjJqBBbnl6CUUlAtcGeznUAc25d_/view)
 
 ## Test:
 Click the link below to see the test:
 
-(https://drive.google.com/file/d/14j8kyKbzULoMxxV86mGmsGQdc2qayEc0/view)
+(https://drive.google.com/file/d/1WgNYZnK_wV4XSzqD0N-AqJjLWdz0_w3f/view)
 
 ## Licese:
 MIT License

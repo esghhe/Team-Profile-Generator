@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
-const fs = require ('fs');
+const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
+const fs = require('fs');
 const generateTeam = require('./src/generateTeam');
 
 
@@ -21,36 +21,34 @@ const managerQuestions = () => {
         },
         {
             type: 'input',
-            name: 'eamil',
+            name: 'email',
             message: 'What is the team manager\'s email?',
         },
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'What is the manager\'s office number?',
+            message: 'What is the team manager\'s office number?',
         },
         {
             type: 'list',
             name: 'addMember',
-            message: 'Do you want to add another team member?',
-            choices: ['Yes', 'No'],
-            message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern'],
+            message: 'What type of team member would you like to add?',
+            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
         }
     ])
     .then((managerAnswers) => {
-
+    
         const manager = new Manager(managerAnswers.id, managerAnswers.name, managerAnswers.email, managerAnswers.officeNumber)
         team.push(manager)
         switch(managerAnswers.addMember) {
-           case 'Engineer':
-               engineerQuestions();
-               break;
-           case 'Intern':
-               internQuestions();
-               break;
-           default:
-           writeToFile('src/index.html', generateTeam(team))
+            case 'Engineer':
+                engineerQuestions();
+                break;
+            case 'Intern':
+                internQuestions();
+                break;
+            default: 
+            writeToFile('dist/index.html', generateTeam(team))
         }
     });
 };
@@ -75,15 +73,13 @@ const engineerQuestions = () => {
         {
             type: 'input',
             name: 'github',
-            message: 'What is the engineer\'s Github username?',
+            message: 'What is the engineer\'s GitHub username?',
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'addMember',
-            message: 'Do you want to add another team member?',
-            choices: ['Yes', 'No'],
             message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern'],
+            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
         }
     ])
     .then((engineerAnswers) => {
@@ -96,8 +92,8 @@ const engineerQuestions = () => {
             case 'Intern':
                 internQuestions();
                 break;
-            default:
-                writeToFile('src/index.html', generateTeam(team))
+            default: 
+            writeToFile('dist/index.html', generateTeam(team))
         }
     })
 };
@@ -127,10 +123,8 @@ const internQuestions = () => {
         {
             type: 'list',
             name: 'addMember',
-            message: 'Do you want to add another team member?',
-            choices: ['Yes', 'No'],
             message: 'What type of team member would you like to add next?',
-            choices: ['Engineer', 'Intern'],
+            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members'],
         }
     ])
     .then((internAnswers) => {
@@ -144,12 +138,13 @@ const internQuestions = () => {
                 internQuestions();
                 break;
             default:
-                writeToFile('src/index.html', generateTeam(team))       
+                writeToFile('dist/index.html', generateTeam(team))
         }
     })
 }
 
 managerQuestions();
+
 
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
